@@ -158,18 +158,13 @@ doctrine_end_justifies_means = {
 		
 		traits = {
 			virtues = {
-				sadistic callous
-				
-				#tenet_pursuit_of_power
+				sadistic
+				callous
 				ambitious
-				disloyal
 			}
 			sins = {
 				compassionate
-				
-				#tenet_pursuit_of_power
 				content
-				loyal
 			}
 		}
 	}

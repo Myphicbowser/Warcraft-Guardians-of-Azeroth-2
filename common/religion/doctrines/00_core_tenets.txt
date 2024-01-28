@@ -3526,6 +3526,7 @@
 					doctrine:tenet_armed_pilgrimages = { is_in_list = selected_doctrines }
 					doctrine:tenet_struggle_submission = { is_in_list = selected_doctrines } 
 					doctrine:tenet_pursuit_of_power = { is_in_list = selected_doctrines }
+					doctrine:special_doctrine_end_justifies_means = { is_in_list = selected_doctrines }
 				}
 			}
 		}
@@ -3894,6 +3895,61 @@
 			
 			# tenet_ritual_cannibalism
 			cannibalism_legal = yes
+		}
+	}
+	tenet_dark_communion = {
+		icon = core_tenet_communion
+		
+		# Warcraft
+		is_shown = {
+			evil_public_religion_trigger = yes
+		}
+		
+		piety_cost = {
+			if = {
+				limit = {
+					OR = {
+						# Warcraft
+						like_christianity_religion_trigger = yes
+						like_judaism_religion_trigger = yes
+					}
+				}
+				value = faith_tenet_cost_low
+			}
+			else_if = {
+				limit = {
+					# Warcraft
+					like_pagan_religion_trigger = yes
+				}
+				value = faith_tenet_cost_high
+			}
+			else = {
+				value = faith_tenet_cost_mid
+			}
+
+			# Multiplier for keeping same tenet
+			if = {
+				limit = { has_doctrine = tenet_dark_communion }
+				multiply = faith_unchanged_doctrine_cost_mult
+			}
+		}
+		can_pick = {
+			custom_description = {
+				text = doctrine_requires_head_of_faith_trigger
+				NOT = {
+					doctrine:doctrine_no_head = { is_in_list = selected_doctrines }
+				}
+			}
+		}
+
+		parameters = {
+			seek_indulgences_active = yes
+			seek_indulgences_active_2 = yes
+			excommunication_active = yes
+		}
+		traits = {
+			virtues = { loyal }
+			sins = { disloyal }
 		}
 	}
 }

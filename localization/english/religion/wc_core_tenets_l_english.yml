@@ -44,6 +44,13 @@
  tenet_cult_of_strength_name:0 "Cult of Strength"
  tenet_cult_of_strength_desc:0 "The stronger we are, the closer we are to divinity. Never stop fighting, never stop growing. Each day, stronger than before."
 
+ tenet_dark_communion_name:0 "Dark Communion"
+ tenet_dark_communion_desc:0 "Our Rituals are not merely symbolic, to grovel as a cult in the dark of the night is just the same as prostrating ourselves before the divine we worship. To be denied, nay exiled is a fate worse than death and a crime in itself."
+ doctrine_parameter_seek_indulgences_active:1 "Characters may #V Seek Indulgences#! from their [head_of_faith|E] to pay [gold|E] in exchange for [piety|E]"
+ doctrine_parameter_seek_indulgences_active_2:0 "Characters who have committed [criminal|E] acts may #V Seek Indulgences#! to gain forgiveness for them instead"
+ doctrine_parameter_excommunication_active:0 "Spiritual [heads_of_faith|E] may [excommunicate|E] other characters of their [faith|E]"
+ tenet_excommunicated:0 "[GetTrait('excommunicated').GetName( GetNullCharacter )]"
+
  tenet_ritual_hunt_name:0 "Ritual Hunt"
  tenet_ritual_hunt_desc:0 "There is no better offering than the one you caught with your own hands as our ancestors did. Thus, we consider hunting sacred."
  doctrine_parameter_piety_from_hunts_active:1 "Hosting a #E hunt#! earns [piety|E]"
